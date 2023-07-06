@@ -4,7 +4,6 @@ import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 let panels = gsap.utils.toArray(".panel");
-console.log(panels);
 // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
 let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
 
