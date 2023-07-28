@@ -28,12 +28,12 @@
 			</div>
 			<div class="flex md:hidden">
 				<button class="menu-open mx-6 my-6 hover:scale-105 transition-all duration-100 ease-in-out">
-					<img src="/icons/menu.svg" class="h-8 w-auto"/>
+				  <img src="/icons/menu.svg" class="h-8 w-auto"/>
 				</button>
-				<div class="menu h-screen h-0 fixed w-screen overflow-hidden bg-blue text-white px-sm-side  transition-all duration-300 ease-in-out">
-					<button class="menu-close mt-6 mb-24 hover:scale-105 transition-all duration-100 ease-in-out">
-						<img src="/icons/menu_close.svg" class="h-8 w-auto"/>
-					</button>
+				<div class="menu h-screen fixed w-screen overflow-hidden bg-blue text-white px-sm-side opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+				  <button class="menu-close mt-6 mb-24 hover:scale-105 transition-all duration-100 ease-in-out">
+					<img src="/icons/menu_close.svg" class="h-8 w-auto"/>
+				  </button>
 					<a href="#section-program"><h4 class="font-normal text-[30px] py-2">Program</h4></a>
 					<h4 class="font-normal text-[30px] py-2">Knowledge Hub</h4>
 					<a href="#section-team"><h4 class="font-normal text-[30px] py-2">Team</h4></a>
@@ -317,10 +317,12 @@
 		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
 		<script>
 			document.querySelector('.menu-open').addEventListener('click', () => {
-			  document.querySelector('.menu').classList.toggle('h-0');
+				document.querySelector('.menu').classList.toggle('opacity-0');
+				document.querySelector('.menu').classList.toggle('pointer-events-none');
 			});
 			document.querySelector('.menu-close').addEventListener('click', () => {
-			  document.querySelector('.menu').classList.toggle('h-0');
+				document.querySelector('.menu').classList.toggle('opacity-0');
+				document.querySelector('.menu').classList.toggle('pointer-events-none');
 			});
 			
 			document.addEventListener('DOMContentLoaded', function () {
