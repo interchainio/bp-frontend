@@ -2,17 +2,19 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			spacing: {
+				'sm-side': '32px',
+				'lg-side': '100px',
+				'lg-top': '72px'
+			}
+		},
 		colors: {
 			transparent: 'transparent',
       		current: 'currentColor',
 			'white': '#F5F5F5',
 			'black': '#0F0F0F',
 			'blue': '#0072F7'
-		},
-		spacing: {
-			'lg-side': '100px',
-			'lg-top': '72px'
 		},
 		fontFamily: {
 			sans: ['"Helvetica Neue"', 'sans-serif'],

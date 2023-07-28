@@ -10,62 +10,150 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Interchain Builders Program</title>
 	</head>
-	<body class="bg-white text-black">
+	<body class="bg-white text-black overflow-x-hidden">
+		<!-- HEADER -->
+		<header class="fixed z-10 px-[24px] h-[72px] w-screen bg-white
+		hidden md:flex">
+			<div class="relative flex justify-between items-center w-full h-full">
+				<ul class="list-none text-sm">
+					<li class="inline pr-[50px]"><a href="#program" class="hover:underline">Program</a></li>
+					<li class="inline pr-[50px]"><a href="#" class="hover:underline">Knowledge Hub</a></li>
+					<li class="inline pr-[50px]"><a href="#team" class="hover:underline">Team</a></li>
+					<li class="inline pr-[50px]"><a href="#" class="hover:underline">FAQ</a></li>
+				</ul>
+				<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
+					<button class="px-[16px] py-[8px] border-black border hover:bg-black hover:text-white active:scale-95 transition-all duration-100 ease-in-out">
+						<h6 class="font-medium text-sm">APPLY</h6>
+					</button>
+				</a>
+			</div>
+		</header>
+		<div class="snap-y snap-mandatory">
 			<!-- HERO -->
-			<section class="panel section1 grid grid-cols-3 h-screen min-h-[800px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-1 pt-[80px]">
-					<img src="/icons/icons_01.hero-SX.svg" class="h-100 ml-[-230px]" />
+			<section class="lg:grid lg:grid-cols-3 lg:h-screen lg:min-h-[800px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start">
+				<div class="lg:col-span-1 pt-[80px] items-center ml-[-100px] mt-[-10%]
+				hidden lg:flex">
+					<img src="/icons/desktop/iconsCUT_01.hero-SX.svg" class="object-cover h-[90%] max-h-[600px]"/>
 				</div>
-				<div class="col-span-2 col-start-2 my-auto">
-					<h1 class="font-bold text-3xl mb-[80px] ml-[-8px]">Interchain <br/> Builders <br/> Program</h1>
+				<div class="lg:col-span-2 lg:col-start-2 my-auto">
+					<img src="/icons/mobile/mobile_01.hero-top.svg" class="max-h-[100px] mx-auto lg:hidden mb-[80px]"/>
+					<h1 class="font-bold text-[80px] leading-[70px] lg:text-3xl mb-[80px] ml-[-8px]">Interchain <br/> Builders <br/> Program</h1>
 					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
-						<button class="px-[30px] py-[14px] text-white bg-blue border-[1px] 
-						hover:text-blue hover:bg-white active:scale-95
-						transition-all duration-100 ease-in-out">
-						<h6 class="font-medium text-sm">APPLY NOW</h6>
+						<button class="px-[30px] py-[14px] text-white bg-blue border-[1px] hover:text-blue hover:bg-white active:scale-95 transition-all duration-100 ease-in-out">
+							<h6 class="font-medium text-sm">APPLY NOW</h6>
 						</button>
 					</a>
+					<img src="/icons/mobile/mobile_02.hero-bottom.svg" class="max-h-[300px] mx-auto lg:hidden mt-[160px]"/>
+				</div>
+				<div class="lg:col-span-1 lg:col-start-6 pt-[80px] items-end mr-[-100px]
+				hidden lg:flex">
+					<img src="/icons/desktop/iconsCUT_02.hero-DX.svg" class="object-bottom h-[25%] max-h-[300px]"/>
 				</div>
 			</section>
 
 			<!-- MISSION -->
-			<section class="panel section2 relative grid grid-cols-2 h-screen min-h-[640px] px-lg-side bg-right bg-no-repeat bg-cover bg-white"
-				style="background-image: url('/grids/grid_Mission-1440.svg')" >
-				<div class="col-span-1 my-auto">
-					<h2 class="font-bold text-2xl text-blue mb-[50px]">Providing guidance and support to Cosmos builders</h2>
-					<h3 class="text-xl">We help teams navigate through our 3 tracks: the Accelerator, Orientation and Integration Track</h3>
+			<section class="panel section2 relative lg:grid lg:grid-cols-4 lg:h-screen lg:min-h-[640px] lg:px-lg-side px-sm-side pt-32 bg-right bg-no-repeat bg-cover bg-white snap-start
+            lg:bg-[url('/grids/grid_Mission-1440.svg')]">
+				<div class="lg:col-span-2 my-auto">
+					<h2 class="font-bold text-[50px] leading-[50px] lg:text-2xl text-blue mb-[50px]">Providing guidance and support to Cosmos builders</h2>
+					<h3 class="text-[36px] leading-[40px] lg:text-xl">We help teams navigate through our 3 tracks: the Accelerator, Orientation and Integration Track</h3>
+				</div>
+				<div class="flex justify-end lg:hidden mt-[130px] mr-[-32px]">
+					<img src="/icons/mobile/mobile_03.mission.svg" class="max-w-[60%] min-h-[150px] max-h-[400px]"/>
+				</div>
+			</section>
+			
+			<!-- TRACKS -->
+			<section class="hidden lg:grid">
+				<!-- ACCELERATOR TRACK -->
+				<div id="program" class="panel section3 z-20 lg:grid lg:grid-cols-6 lg:h-screen lg:min-h-[640px] px-lg-side py-lg-top bg-white snap-start" >
+					<div class="col-span-2 flex items-center relative ">
+						<img src="/icons/desktop/iconsCUT_04.track-A.svg" class="absolute inset-0 object-contain h-full w-4/5 ml-[-100px]"/>
+						<div class="h-full items-top z-50">
+							<h4 class="text-md text-blue items-top">How We <br/> Support <br/> Teams</h4>
+						</div>
+					</div>
+					<div class="col-span-3 col-start-3 my-auto">
+						<h4 class="font-normal text-lg mb-[24px]">Accelerator Track</h4>
+						<h2 class="font-bold text-2xl mb-[24px] text-blue">Technical Support & Guidance for Web3 Founders</h2>
+						<p class="text-base mb-[24px]">
+							We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space.
+						</p>
+						<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out bg-white">
+							<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
+								<h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
+								<img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- ORIENTATION TRACK -->
+				<div class="panel section4 z-20 grid grid-cols-6 h-screen min-h-[640px] px-lg-side py-lg-top bg-white snap-start" >
+					<div class="col-span-2 flex items-center relative ">
+						<img src="/icons/desktop/iconsCUT_05.track-B.svg" class="absolute inset-0 object-contain h-full w-4/5 ml-[-100px]"/>
+						<div class="h-full items-top z-50">
+							<h4 class="text-md text-blue items-top">How We <br/> Support <br/> Teams</h4>
+						</div>
+					</div>
+					<div class="col-span-3 col-start-3 my-auto">
+						<h4 class="font-normal text-lg mb-[24px]">Orientation Track</h4>
+						<h2 class="font-bold text-2xl mb-[24px] text-blue">Helping You Decide If Cosmos Is Right For You</h2>
+						<p class="text-base mb-[24px]">
+							With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability.
+						</p>
+						<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
+							<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
+								<h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
+								<img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- INTEGRATION TRACK -->
+				<div class="panel section5 z-20 grid grid-cols-6 h-screen min-h-[640px] px-lg-side py-lg-top bg-white snap-start" >
+					<div class="col-span-2 flex items-center relative ">
+						<img src="/icons/desktop/iconsCUT_06.track-C.svg" class="absolute inset-0 object-contain h-full w-4/5 ml-[-100px]"/>
+						<div class="h-full items-top z-50">
+							<h4 class="text-md text-blue items-top">How We <br/> Support <br/> Teams</h4>
+						</div>
+					</div>
+					<div class="col-span-3 col-start-3 my-auto">
+						<h4 class="font-normal text-lg mb-[24px]">Integration Track</h4>
+						<h2 class="font-bold text-2xl mb-[24px] text-blue">Helping You Connect & Plug Into The Interchain</h2>
+						<p class="text-base mb-[24px]">
+							If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space.
+						</p>
+						<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
+							<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
+								<h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
+								<img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<!-- ACCELERATOR TRACK -->
-			<section class="panel section3 grid grid-cols-6 h-screen min-h-[640px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-2">
-					<h4 class="text-md text-blue">How We <br/> Support <br/> Teams</h4>
-				</div>
-				<div class="col-span-3 col-start-3 my-auto">
-					<h4 class="font-normal text-lg mb-[24px]">Accelerator Track</h4>
-					<h2 class="font-bold text-2xl mb-[24px] text-blue">Technical Support & Guidance for Web3 Founders</h2>
-					<p class="text-base mb-[24px]">
+			<!-- MOBILE -->
+			<section class="lg:hidden flex flex-nowrap overflow-x-scroll scrolling-touch snap-x snap-mandatory pt-32 pb-16">
+				<div class="snap-start w-screen flex-none px-sm-side">
+					<h4 class="font-normal text-[36px] mb-[24px]">Accelerator Track</h4>
+					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Technical Support & Guidance for Web3 Founders</h2>
+					<p class="text-base mb-9">
 						We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space.
 					</p>
-					<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out bg-white">
+					<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
 						<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
 							<h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
 							<img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
 						</a>
 					</div>
 				</div>
-			</section>
-
-			<!-- ORIENTATION TRACK -->
-			<section class="panel section4 grid grid-cols-6 h-screen min-h-[640px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-2">
-					<h4 class="text-md text-blue">How We <br/> Support <br/> Teams</h4>
-				</div>
-				<div class="col-span-3 col-start-3 my-auto">
-					<h4 class="font-normal text-lg mb-[24px]">Orientation Track</h4>
-					<h2 class="font-bold text-2xl mb-[24px] text-blue">Helping You Decide If Cosmos Is Right For You</h2>
-					<p class="text-base mb-[24px]">
+				<div class="snap-start w-screen flex-none px-sm-side">
+					<h4 class="font-normal text-[36px] mb-[24px]">Orientation Track</h4>
+					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Helping You Decide If Cosmos Is Right For You</h2>
+					<p class="text-base mb-9">
 						With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability.
 					</p>
 					<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
@@ -75,17 +163,10 @@
 						</a>
 					</div>
 				</div>
-			</section>
-
-			<!-- INTEGRATION TRACK -->
-			<section class="panel section5 grid grid-cols-6 h-screen min-h-[640px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-2">
-					<h4 class="text-md text-blue">How We <br/> Support <br/> Teams</h4>
-				</div>
-				<div class="col-span-3 col-start-3 my-auto">
-					<h4 class="font-normal text-lg mb-[24px]">Integration Track</h4>
-					<h2 class="font-bold text-2xl mb-[24px] text-blue">Helping You Connect & Plug Into The Interchain</h2>
-					<p class="text-base mb-[24px]">
+				<div class="snap-start w-screen flex-none px-sm-side">
+					<h4 class="font-normal text-[36px] mb-[24px]">Integration Track</h4>
+					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Helping You Connect & Plug Into The Interchain</h2>
+					<p class="text-base mb-9">
 						If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space.
 					</p>
 					<div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
@@ -96,11 +177,20 @@
 					</div>
 				</div>
 			</section>
+			<div class="lg:hidden flex justify-center w-screen px-sm-side py-16">
+				<img src="/icons/void.svg" class="inline h-[24px] w-auto px-6"/>
+				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6"/>
+				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6"/>
+			</div>
+			
 
 			<!-- WHAT WE OFFER -->
-			<section class="panel section6 grid grid-cols-2 h-screen min-h-[800px] px-lg-side py-lg-top bg-white">
-				<div class="col-span-1">
-					<h4 class="text-md text-blue">What <br/> We Offer</h4>
+			<section class="panel section6 z-20 lg:grid lg:grid-cols-2 lg:h-screen min-h-[800px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start">
+				<div class="lg:col-span-1 flex items-center relative ">
+					<img src="/icons/desktop/iconsCUT_07.offer.svg" class="hidden lg:flex absolute inset-0 object-contain h-4/5 w-4/5 ml-[-100px]"/>
+					<div class="h-full items-top z-50">
+						<h4 class="pb-24 lg:pb-0 text-md text-blue items-top">What <br class="hidden lg:flex"/> We Offer</h4>
+					</div>
 				</div>
 				<div class="col-span-1 col-start-2 my-auto divide-y divide-blue divide-solid">
 					<div class="py-[30px]">
@@ -119,11 +209,11 @@
 			</section>
 
 			<!-- KNOWLEDGE HUB -->
-			<section class="panel section7 relative grid grid-cols-2 h-screen min-h-[800px] px-lg-side bg-right bg-no-repeat bg-cover bg-white"
-				style="background-image: url('/grids/grid_Hub-1440.svg')" >
-				<h4 class="absolute pt-[72px] pl-[100px] text-md text-blue">The Builders<br />Knowledge<br />Hub</h4>
-				<div class="col-span-1 my-auto">
-					<h2 class="font-bold text-2xl text-blue mb-[40px]">Web3's Best Practices, Available on Demand</h2>
+			<section class="panel section7 z-20 relative lg:grid lg:grid-cols-2 h-screen min-h-[800px] px-sm-side lg:px-lg-side bg-right bg-no-repeat bg-cover bg-white snap-start
+			bg-[url('/grids/grid_Smartphone.svg')] lg:bg-[url('/grids/grid_Hub-1440.svg')]" >
+				<h4 class="lg:absolute py-24 lg:pl-[100px] text-md text-blue">The Builders <br class="hidden lg:flex" />Knowledge<br class="hidden lg:flex" /> Hub</h4>
+				<div class="lg:col-span-1 my-auto">
+					<h2 class="font-bold text-[52px] leading-[52px] lg:text-2xl text-blue mb-[40px]">Web3's Best Practices, Available on Demand</h2>
 					<p class="text-base mb-[40px]">Find all the educational resources you need. The Builders Knowledge Hub is a collection of articles and research intended to support Web3 founders in their journey towards the launch of a successful product.</p>
 					<button class="px-[30px] py-[14px] text-white bg-blue border-[1px] 
 						hover:text-blue hover:bg-white active:scale-95
@@ -134,23 +224,27 @@
 			</section>
 
 			<!-- TEAM -->
-			<section class="panel section8 grid grid-cols-6 h-screen min-h-[500px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-2">
-					<h4 class="text-md text-blue">Team</h4>
+			<section id="team" class="panel section8 z-20 lg:grid lg:grid-cols-6 lg:h-screen min-h-[500px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start" >
+				<div class="lg:col-span-2">
+					<h4 class="text-md text-blue pb-24">Team</h4>
 				</div>
-				<div class="col-span-3 col-start-3 my-auto">
-					<a target="_blank" href="https://twitter.com/stefsprinz"><h2 class="font-bold text-2xl hover:underline text-blue">Stef Sprinz</h2></a>
-					<a target="_blank" href="https://twitter.com/onurakpolat"><h2 class="font-bold text-2xl hover:underline text-blue">Onur Akpolat</h2></a>
-					<a target="_blank" href="https://twitter.com/noamwithveto"><h2 class="font-bold text-2xl hover:underline text-blue">Noam Cohen</h2></a>
-					<a target="_blank" href="https://twitter.com/mark0baricevic"><h2 class="font-bold text-2xl hover:underline text-blue">Marko Baricevic</h2></a>
-					<a target="_blank" href="https://twitter.com/MoonMan421"><h2 class="font-bold text-2xl hover:underline text-blue">Len Seitter</h2></a>
+				<div class="lg:col-span-3 lg:col-start-3 pb-24 lg:pb-0 my-auto">
+					<a target="_blank" href="https://twitter.com/stefsprinz"><h2 class="font-bold text-[52px] leading-[56px] lg:text-2xl hover:underline text-blue">Stef Sprinz</h2></a>
+					<a target="_blank" href="https://twitter.com/onurakpolat"><h2 class="font-bold text-[52px] leading-[56px] lg:text-2xl hover:underline text-blue">Onur Akpolat</h2></a>
+					<a target="_blank" href="https://twitter.com/noamwithveto"><h2 class="font-bold text-[52px] leading-[56px] lg:text-2xl hover:underline text-blue">Noam Cohen</h2></a>
+					<a target="_blank" href="https://twitter.com/mark0baricevic"><h2 class="font-bold text-[52px] leading-[56px] lg:text-2xl hover:underline text-blue">Marko Baricevic</h2></a>
+					<a target="_blank" href="https://twitter.com/MoonMan421"><h2 class="font-bold text-[52px] leading-[56px] lg:text-2xl hover:underline text-blue">Len Seitter</h2></a>
+				</div>
+				<div class="flex lg:col-span-1 lg:col-start-6 items-center justify-center lg:mr-[-100px]">
+					<img src="/icons/desktop/iconsCUT_02.hero-DX.svg" class="hidden lg:flex object-contain h-full w-full"/>
+					<img src="/icons/mobile/mobile_04.team.svg" class="flex lg:hidden object-contain w-3/5"/>
 				</div>
 			</section>
 
 			<!-- CALL TO ACTION -->
-			<section class="panel section9 grid grid-cols-2 h-screen min-h-[500px] px-lg-side py-lg-top bg-white" >
-				<div class="col-span-1 my-auto">
-					<h2 class="font-bold mb-[40px] text-2xl text-blue">Ready to join the Builders Program?</h2>
+			<section class="panel section9 z-20 lg:grid lg:grid-cols-3 lg:h-screen min-h-[500px] px-sm-side lg:px-lg-side pt-52 lg:py-lg-top bg-white snap-start" >
+				<div class="lg:col-span-2 my-auto">
+					<h2 class="font-bold mb-[40px] text-[52px] leading-[56px] lg:text-2xl text-blue">Ready to join the Builders Program?</h2>
 					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank"></a>
 						<button class="px-[30px] py-[14px] text-white bg-blue border-[1px] 
 						hover:text-blue hover:bg-white active:scale-95
@@ -159,14 +253,18 @@
 						</button>
 					</a>
 				</div>
+				<div class="lg:col-span-1 lg:col-start-3 flex items-center justify-center mr-[-100px]">
+					<img src="/icons/desktop/iconsCUT_09.CTA.svg" class="hidden lg:flex object-contain h-full lg:w-full"/>
+					<img src="/icons/mobile/mobile_05.CTA.svg" class="lg:hidden pt-32 object-contain w-3/5"/>
+				</div>
 			</section>
 
 			<!-- FOOTER -->
-			<section class="panel section-footer grid grid-cols-6 align-top px-lg-side py-lg-top bg-blue text-white" >
+			<footer class="panel section-footer z-20 hidden lg:grid grid-cols-6 align-top px-lg-side py-lg-top bg-blue text-white" >
 				<div class="col-span-3 block mt-[-8px]">
 					<h2 class="font-bold text-2xl mb-[60px]">Interchain<br />Builders<br />Program</h2>
-					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank"></a>	
-						<button class="px-[14px] py-[10px] text-white border-white border-[1px] 
+					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
+						<button class="px-[16px] py-[8px] text-white border-white border-[1px] 
 						hover:bg-white hover:text-blue active:scale-95
 						transition-all duration-100 ease-in-out">
 						<h6 class="font-medium text-sm">APPLY</h6>
@@ -195,8 +293,8 @@
 					<a target="_blank" href="https://twitter.com/BuildersProgram" class="hover:underline">Twitter</a><br />
 					<a target="_blank" href="https://medium.com/@BuildersProgram" class="hover:underline">Medium</a>
 				</div>
-				
 			</section>
-		<script type="module" src="/scrollTrigger.js"></script>
+		</div>
+		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
 	</body>
 </html>
