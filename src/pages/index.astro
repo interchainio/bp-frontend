@@ -12,9 +12,8 @@
 	</head>
 	<body class="bg-white text-black overflow-x-hidden">
 		<!-- HEADER -->
-		<header class="fixed z-10 px-[24px] h-[72px] w-screen bg-white
-		hidden md:flex">
-			<div class="relative flex justify-between items-center w-full h-full">
+		<header class="fixed z-30 w-screen md:bg-white flex">
+			<div class="hidden md:flex relative justify-between items-center w-full px-6 h-[72px]">
 				<ul class="list-none text-sm">
 					<li class="inline pr-[50px]"><a href="#program" class="hover:underline">Program</a></li>
 					<li class="inline pr-[50px]"><a href="#" class="hover:underline">Knowledge Hub</a></li>
@@ -27,10 +26,29 @@
 					</button>
 				</a>
 			</div>
+			<div class="flex md:hidden">
+				<button class="menu-open mx-6 my-6 hover:scale-105 transition-all duration-100 ease-in-out">
+					<img src="/icons/menu.svg" class="h-8 w-auto"/>
+				</button>
+				<div class="menu h-screen h-0 fixed w-screen overflow-hidden bg-blue text-white px-sm-side  transition-all duration-300 ease-in-out">
+					<button class="menu-close mt-6 mb-24 hover:scale-105 transition-all duration-100 ease-in-out">
+						<img src="/icons/menu_close.svg" class="h-8 w-auto"/>
+					</button>
+					<a href="#section-program"><h4 class="font-normal text-[30px] py-2">Program</h4></a>
+					<h4 class="font-normal text-[30px] py-2">Knowledge Hub</h4>
+					<a href="#section-team"><h4 class="font-normal text-[30px] py-2">Team</h4></a>
+					<h4 class="font-normal text-[30px] pt-2 pb-32">FAQ</h4>
+					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
+						<button class="px-[16px] py-[8px] border-white border hover:bg-white hover:text-blue active:scale-95 transition-all duration-100 ease-in-out">
+							<h6 class="font-medium text-sm">APPLY</h6>
+						</button>
+					</a>
+				</div>
+			</div>
 		</header>
 		<div class="snap-y snap-mandatory">
 			<!-- HERO -->
-			<section class="lg:grid lg:grid-cols-3 lg:h-screen lg:min-h-[800px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start">
+			<section class="lg:grid lg:grid-cols-3 lg:h-screen lg:min-h-[800px] px-sm-side lg:px-lg-side pt-44 pb-lg-top lg:py-lg-top bg-white snap-start">
 				<div class="lg:col-span-1 pt-[80px] items-center ml-[-100px] mt-[-10%]
 				hidden lg:flex">
 					<img src="/icons/desktop/iconsCUT_01.hero-SX.svg" class="object-cover h-[90%] max-h-[600px]"/>
@@ -43,10 +61,9 @@
 							<h6 class="font-medium text-sm">APPLY NOW</h6>
 						</button>
 					</a>
-					<img src="/icons/mobile/mobile_02.hero-bottom.svg" class="max-h-[300px] mx-auto lg:hidden mt-[160px]"/>
+					<img src="/icons/mobile/mobile_02.hero-bottom.svg" class="max-h-[300px] mx-auto lg:hidden mt-40"/>
 				</div>
-				<div class="lg:col-span-1 lg:col-start-6 pt-[80px] items-end mr-[-100px]
-				hidden lg:flex">
+				<div class="lg:col-span-1 lg:col-start-6 pt-[80px] items-end mr-[-100px] hidden lg:flex">
 					<img src="/icons/desktop/iconsCUT_02.hero-DX.svg" class="object-bottom h-[25%] max-h-[300px]"/>
 				</div>
 			</section>
@@ -64,9 +81,9 @@
 			</section>
 			
 			<!-- TRACKS -->
-			<section class="hidden lg:grid">
+			<section class="hidden lg:grid" id="section-program">
 				<!-- ACCELERATOR TRACK -->
-				<div id="program" class="panel section3 z-20 lg:grid lg:grid-cols-6 lg:h-screen lg:min-h-[640px] px-lg-side py-lg-top bg-white snap-start" >
+				<div class="panel section3 z-20 lg:grid lg:grid-cols-6 lg:h-screen lg:min-h-[640px] px-lg-side py-lg-top bg-white snap-start" >
 					<div class="col-span-2 flex items-center relative ">
 						<img src="/icons/desktop/iconsCUT_04.track-A.svg" class="absolute inset-0 object-contain h-full w-4/5 ml-[-100px]"/>
 						<div class="h-full items-top z-50">
@@ -136,8 +153,8 @@
 			</section>
 
 			<!-- MOBILE -->
-			<section class="lg:hidden flex flex-nowrap overflow-x-scroll scrolling-touch snap-x snap-mandatory pt-32 pb-16">
-				<div class="snap-start w-screen flex-none px-sm-side">
+			<section class="lg:hidden flex flex-nowrap overflow-x-scroll scrolling-touch snap-x snap-mandatory pt-32 pb-16 scroll-container">
+				<div class="snap-start w-screen flex-none px-sm-side scroll-section">
 					<h4 class="font-normal text-[36px] mb-[24px]">Accelerator Track</h4>
 					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Technical Support & Guidance for Web3 Founders</h2>
 					<p class="text-base mb-9">
@@ -150,7 +167,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="snap-start w-screen flex-none px-sm-side">
+				<div class="snap-start w-screen flex-none px-sm-side scroll-section">
 					<h4 class="font-normal text-[36px] mb-[24px]">Orientation Track</h4>
 					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Helping You Decide If Cosmos Is Right For You</h2>
 					<p class="text-base mb-9">
@@ -163,7 +180,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="snap-start w-screen flex-none px-sm-side">
+				<div class="snap-start w-screen flex-none px-sm-side scroll-section">
 					<h4 class="font-normal text-[36px] mb-[24px]">Integration Track</h4>
 					<h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">Helping You Connect & Plug Into The Interchain</h2>
 					<p class="text-base mb-9">
@@ -178,9 +195,9 @@
 				</div>
 			</section>
 			<div class="lg:hidden flex justify-center w-screen px-sm-side py-16">
-				<img src="/icons/void.svg" class="inline h-[24px] w-auto px-6"/>
-				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6"/>
-				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6"/>
+				<img src="/icons/void.svg" class="inline h-[24px] w-auto px-6 icon"/>
+				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6 icon"/>
+				<img src="/icons/filled.svg" class="inline h-[24px] w-auto px-6 icon"/>
 			</div>
 			
 
@@ -188,7 +205,7 @@
 			<section class="panel section6 z-20 lg:grid lg:grid-cols-2 lg:h-screen min-h-[800px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start">
 				<div class="lg:col-span-1 flex items-center relative ">
 					<img src="/icons/desktop/iconsCUT_07.offer.svg" class="hidden lg:flex absolute inset-0 object-contain h-4/5 w-4/5 ml-[-100px]"/>
-					<div class="h-full items-top z-50">
+					<div class="h-full items-top">
 						<h4 class="pb-24 lg:pb-0 text-md text-blue items-top">What <br class="hidden lg:flex"/> We Offer</h4>
 					</div>
 				</div>
@@ -224,7 +241,7 @@
 			</section>
 
 			<!-- TEAM -->
-			<section id="team" class="panel section8 z-20 lg:grid lg:grid-cols-6 lg:h-screen min-h-[500px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start" >
+			<section id="section-team" class="panel section8 z-20 lg:grid lg:grid-cols-6 lg:h-screen min-h-[500px] px-sm-side lg:px-lg-side py-lg-top bg-white snap-start" >
 				<div class="lg:col-span-2">
 					<h4 class="text-md text-blue pb-24">Team</h4>
 				</div>
@@ -255,14 +272,16 @@
 				</div>
 				<div class="lg:col-span-1 lg:col-start-3 flex items-center justify-center mr-[-100px]">
 					<img src="/icons/desktop/iconsCUT_09.CTA.svg" class="hidden lg:flex object-contain h-full lg:w-full"/>
-					<img src="/icons/mobile/mobile_05.CTA.svg" class="lg:hidden pt-32 object-contain w-3/5"/>
+					<img src="/icons/mobile/mobile_05.CTA.svg" class="lg:hidden pt-48 object-contain w-3/5"/>
 				</div>
 			</section>
 
 			<!-- FOOTER -->
-			<footer class="panel section-footer z-20 hidden lg:grid grid-cols-6 align-top px-lg-side py-lg-top bg-blue text-white" >
-				<div class="col-span-3 block mt-[-8px]">
-					<h2 class="font-bold text-2xl mb-[60px]">Interchain<br />Builders<br />Program</h2>
+			<footer class="panel section-footer z-20 grid grid-cols-6 h-auto align-top px-sm-side lg:px-lg-side py-lg-top bg-blue text-white" >
+				<div class="col-span-3 lg:row-start-1 row-span-1 block mt-[-8px]">
+					<h2 class="font-bold text-lg lg:text-2xl mb-[60px]">Interchain<br />Builders<br />Program</h2>
+				</div>
+				<div class="col-start-6 lg:col-start-1 lg:row-start-2">
 					<a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
 						<button class="px-[16px] py-[8px] text-white border-white border-[1px] 
 						hover:bg-white hover:text-blue active:scale-95
@@ -271,8 +290,8 @@
 						</button>
 					</a>
 				</div>
-				<div class="col-span-1 col-start-4">
-					<h4 class="font-medium text-md mb-[40px]">Company</h4>
+				<div class="col-span-6 md:col-span-1 col-start-1 lg:col-start-4 row-start-2 lg:row-start-1 row-span-1">
+					<h4 class="font-medium text-md mb-6 mt-20 md:mt-0 md:mb-[40px]">Company</h4>
 					<i>Interchain Foundation<br />
 					Baarermattstrasse 6, 6340<br />
 					Baar, Switzerland<br />
@@ -280,21 +299,43 @@
 					<a target="_blank" href="https://interchain.io/privacy" class="hover:underline">Privacy Policy</a><br />
 					<a target="_blank" href="#" class="hover:underline">Legal</a>
 				</div>
-				<div class="col-span-1 col-start-5">
-					<h4 class="font-medium text-md mb-[40px]">Content</h4>
+				<div class="col-span-6 md:col-span-1 md:col-start-3 lg:col-start-5 row-start-3 md:row-start-2 lg:row-start-1 row-span-1">
+					<h4 class="font-medium text-md mb-6 mt-20 md:mt-0 md:mb-[40px]">Content</h4>
 					<a target="_blank" href="#" class="hover:underline">Knowledge Hub</a><br />
 					<a target="_blank" href="#" class="hover:underline">FAQ</a><br />
-					<a target="_blank" href="#" class="hover:underline">Program</a><br />
-					<a target="_blank" href="#" class="hover:underline">Team</a><br />
+					<a target="_blank" href="#section-program" class="hover:underline">Program</a><br />
+					<a target="_blank" href="#section-team" class="hover:underline">Team</a><br />
 					<a target="_blank" href="#" class="hover:underline">Career</a>
 				</div>
-				<div class="font-medium col-span-1 col-start-6">
-					<h4 class="font-medium text-md mb-[40px]">Social</h4>
+				<div class="col-span-6 md:col-span-1 font-medium md:col-start-5 lg:col-start-6 row-start-4 md:row-start-2 lg:row-start-1 row-span-1">
+					<h4 class="font-medium text-md mb-6 mt-20 md:mt-0 md:mb-[40px]">Social</h4>
 					<a target="_blank" href="https://twitter.com/BuildersProgram" class="hover:underline">Twitter</a><br />
 					<a target="_blank" href="https://medium.com/@BuildersProgram" class="hover:underline">Medium</a>
 				</div>
 			</section>
 		</div>
 		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
+		<script>
+			document.querySelector('.menu-open').addEventListener('click', () => {
+			  document.querySelector('.menu').classList.toggle('h-0');
+			});
+			document.querySelector('.menu-close').addEventListener('click', () => {
+			  document.querySelector('.menu').classList.toggle('h-0');
+			});
+			
+			document.addEventListener('DOMContentLoaded', function () {
+			let scrollSections = Array.from(document.querySelectorAll('.scroll-section'));
+			let icons = Array.from(document.querySelectorAll('.icon'));
+
+			document.querySelector('.scroll-container').addEventListener('scroll', (e) => {
+			let currentSectionIndex = Math.round(e.target.scrollLeft / window.innerWidth);
+			
+			icons.forEach((icon, index) => {
+				let iconSrc = (index === currentSectionIndex) ? '/icons/void.svg' : '/icons/filled.svg';
+				icon.setAttribute('src', iconSrc);
+			});
+			});
+		});
+		</script>
 	</body>
 </html>
