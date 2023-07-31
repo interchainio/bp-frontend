@@ -1,0 +1,78 @@
+---
+import FAQ from '../components/faq_comp.astro';
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Interchain Builders Program FAQ</title>
+	</head>
+	<body class="bg-white text-black">
+		<!-- HEADER -->
+		<Header />
+		<div class="lg:grid lg:grid-cols-6 px-sm-side lg:px-lg-side py-32 lg:py-40">
+			<div class="lg:col-span-2 my-9">
+				<h4 class="text-md text-blue">Frequently<br/>Asked<br/>Questions</h4>
+			</div>
+			<div class="md:col-start-3 md:col-span4 lg:col-span-3">
+				<FAQ
+					question="How do I apply to the Interchain Builders Program?"
+					answer="Please fill out our <a href='https://airtable.com/shrdDF6BQUDVH06fm' target='_blank' class='hover:underline text-blue'>application form</a>."
+				/>
+				<FAQ
+					question="Are there any costs for participating in the Interchain Builders Program?"
+					answer="No, the program is entirely free. The Builders Program is part of the ecosystem's public good infrastructure, funded by the ICF as part of their mandate to support the growth and development of the ecosystem."
+				/>
+				<FAQ
+					question="Can I receive a grant?"
+					answer="No. If you're seeking non-dilutive grants, we can connect you to major grant programs in the ecosystem, but we, nor the ICF gives out grants or any sort of funding to participating projects. We do connect projects that are fundraising to our network of investors. We also have an overview available on our Knowledge Hub."
+				/>
+				<FAQ
+					question="What is the application process?"
+					answer="The application process consists of an evaluation on the basis of your submission and an introductory call between your team and the Builders Program committee. The program onboards new teams on a quarterly basis, usually at the end of each quarter."
+				/>
+				<FAQ
+					question="Is there an application deadline?"
+					answer="There are no application periods or deadlines, applications can be submitted at any point. We review and onboard new teams quarterly, so the waiting time can run up to 3 months until we evaluate the project and invite you to an introduction call."
+				/>
+				<FAQ
+					question="How long does it take until I hear back from you?"
+					answer="After the submission of your application you'll hear back from us within 1 week and we'll inform you with the approximate date for the upcoming introduction and evaluation cycle."
+				/>
+				<FAQ
+					question="What are the eligibility requirements?"
+					answer="The Interchain Builders Program supports projects that are using at least one component of the Interchain Stack: Tendermint, CosmosSDK, IBC, CosmWasm.<br/><br/>Projects can enter the program at multiple stages, ranging to early stages such as pre-incorporation and fundraising as well as teams who are already more progressed. Teams who apply should have an established team in place and have a clear vision of their project. The most important thing for a successful application is a compelling idea and a well thought out proposal of your project. No white paper is needed, but the more detailed and more specific the information material is, the better."
+				/>
+				<FAQ
+					question="What if my project does not use the Interchain Stack?"
+					answer="If you are still orienting wether the Interchain Stack is the right solution for you to build your app specific chain or dApp on another Cosmos chain, we are also happy to support you in making that decision. Feel free to ask any questions you might have by emailing us at <a href='mailto:builders@interchain.io' target='_blank' class='hover:underline text-blue'>builders@interchain.io</a>. <br/><br/>If you would like to get an overview of the Interchain Stack and building a Cosmos chain, we provide some guidance <a href='https://hub.join.builders/the-cosmos-ecosystem/building-with-the-interchain-stack' target='_blank' class='hover:underline text-blue'>here</a>."
+				/>
+				<FAQ
+					question="Do I need to have funding in order to apply to the Builders Program?"
+					answer="No. If your project is at a stage where it doesn't have funding yet, we will help you with a fundraising strategy and navigate you through the funding process and help connect you to our ever growing network of Venture Funds."
+				/>
+				<FAQ
+					question="How long does the program run for?"
+					answer="As there is no one size fits all model, the length of the program will be evaluated individually for each team depending on their stage and requirements. The program is designed as a long term partnership rather than a short term bootcamp."
+				/>
+			</div>
+		</div>
+		<Footer />
+		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
+		<script>
+			document.querySelector('.menu-open').addEventListener('click', () => {
+				document.querySelector('.menu').classList.toggle('opacity-0');
+				document.querySelector('.menu').classList.toggle('pointer-events-none');
+			});
+			document.querySelector('.menu-close').addEventListener('click', () => {
+				document.querySelector('.menu').classList.toggle('opacity-0');
+				document.querySelector('.menu').classList.toggle('pointer-events-none');
+			});
+		</script>
+	</body>
+</html>

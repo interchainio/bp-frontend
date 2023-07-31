@@ -1,0 +1,38 @@
+---
+const { } = Astro.props;
+---
+
+<header class="fixed z-30 w-screen md:bg-white flex">
+    <div class="hidden md:flex relative justify-between items-center w-full px-6 h-[72px]">
+        <ul class="list-none text-sm">
+            <li class="inline pr-[50px]"><a href="/index.html#section-program" class="hover:underline">Program</a></li>
+            <li class="inline pr-[50px]"><a href="#" class="hover:underline">Knowledge Hub</a></li>
+            <li class="inline pr-[50px]"><a href="/index.html#section-team" class="hover:underline">Team</a></li>
+            <li class="inline pr-[50px]"><a href="/faq.html" class="hover:underline">FAQ</a></li>
+        </ul>
+        <a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
+            <button class="px-[16px] py-[8px] border-black border hover:bg-black hover:text-white active:scale-95 transition-all duration-100 ease-in-out">
+                <h6 class="font-medium text-sm">APPLY</h6>
+            </button>
+        </a>
+    </div>
+    <div class="flex md:hidden">
+        <button class="menu-open mx-6 my-6 hover:scale-105 transition-all duration-100 ease-in-out">
+          <img src="/icons/menu.svg" class="h-8 w-auto"/>
+        </button>
+        <div class="menu h-screen fixed w-screen overflow-hidden bg-blue text-white px-sm-side opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+          <button class="menu-close mt-6 mb-24 hover:scale-105 transition-all duration-100 ease-in-out">
+            <img src="/icons/menu_close.svg" class="h-8 w-auto"/>
+          </button>
+            <a href="/index.html#section-program"><h4 class="font-normal text-[30px] py-2">Program</h4></a>
+            <h4 class="font-normal text-[30px] py-2">Knowledge Hub</h4>
+            <a href="/index.html#section-team"><h4 class="font-normal text-[30px] py-2">Team</h4></a>
+            <a href="/faq.html" class="hover:underline"><h4 class="font-normal text-[30px] pt-2 pb-32">FAQ</h4></a>
+            <a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">	
+                <button class="px-[16px] py-[8px] border-white border hover:bg-white hover:text-blue active:scale-95 transition-all duration-100 ease-in-out">
+                    <h6 class="font-medium text-sm">APPLY</h6>
+                </button>
+            </a>
+        </div>
+    </div>
+</header>

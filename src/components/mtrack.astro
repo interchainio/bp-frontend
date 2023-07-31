@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	content: string;
+}
+
+const { title, subtitle, content } = Astro.props;
+---
+
+<div class="snap-start w-screen flex-none px-sm-side scroll-section">
+    <h4 class="font-normal text-[36px] mb-[24px]">{title}</h4>
+    <h2 class="font-bold text-[40px] leading-[40px] mb-9 text-blue">{subtitle}</h2>
+    <p class="text-base mb-9">
+        {content}
+    </p>
+    <div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out">
+        <a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
+            <h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
+            <img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
+        </a>
+    </div>
+</div>
