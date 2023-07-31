@@ -9,7 +9,6 @@ import Mission from '../components/mission.astro';
 import MTrack from '../components/mtrack.astro';
 import Offer from '../components/offer.astro';
 import Team from '../components/team.astro';
-
 ---
 
 <html lang="en">
@@ -23,7 +22,7 @@ import Team from '../components/team.astro';
 	<body class="bg-white text-black">
 		<!-- HEADER -->
 		<Header />
-		<div class="snap-y snap-mandatory">
+		<div class="lg:snap-y lg:snap-mandatory lg:h-screen lg:w-screen lg:overflow-scroll">
 			<Hero />
 			<Mission />
 			
@@ -81,7 +80,6 @@ import Team from '../components/team.astro';
 			<CTA />
 			<Footer />
 		</div>
-		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
 		<script>
 			document.querySelector('.menu-open').addEventListener('click', () => {
 				document.querySelector('.menu').classList.toggle('opacity-0');
