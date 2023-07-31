@@ -27,45 +27,47 @@ import Team from '../components/team.astro';
 			<Hero />
 			<Mission />
 			
-			<!-- TRACKS DESKTOP-->
-			<section class="hidden lg:grid bg-grey" id="section-program">
-				<DTrack
-					title="Accelerator Track"
-					subtitle="Technical Support & Guidance for Web3 Founders"
-					content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
-					img="/icons/desktop/iconsCUT_04.track-A.svg"
-				/>
-				<DTrack
-					title="Orientation Track"
-					subtitle="Helping You Decide If Cosmos Is Right For You"
-					content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
-					img="/icons/desktop/iconsCUT_05.track-B.svg"
-				/>
-				<DTrack
-					title="Integration Track"
-					subtitle="Helping You Connect & Plug Into The Interchain"
-					content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
-					img="/icons/desktop/iconsCUT_06.track-C.svg"
-				/>
-			</section>
+			<section id="section-program">
+				<!-- TRACKS DESKTOP-->
+				<div class="hidden lg:grid bg-grey">
+					<DTrack
+						title="Accelerator Track"
+						subtitle="Technical Support & Guidance for Web3 Founders"
+						content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
+						img="/icons/desktop/iconsCUT_04.track-A.svg"
+					/>
+					<DTrack
+						title="Orientation Track"
+						subtitle="Helping You Decide If Cosmos Is Right For You"
+						content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
+						img="/icons/desktop/iconsCUT_05.track-B.svg"
+					/>
+					<DTrack
+						title="Integration Track"
+						subtitle="Helping You Connect & Plug Into The Interchain"
+						content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
+						img="/icons/desktop/iconsCUT_06.track-C.svg"
+					/>
+				</div>
 
-			<!-- TRACKS MOBILE -->
-			<section class="lg:hidden flex flex-nowrap overflow-x-scroll bg-grey scrolling-touch snap-x snap-mandatory pt-32 pb-16 scroll-container">
-				<MTrack
-					title="Accelerator Track"
-					subtitle="Technical Support & Guidance for Web3 Founders"
-					content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
-				/>
-				<MTrack
-					title="Orientation Track"
-					subtitle="Helping You Decide If Cosmos Is Right For You"
-					content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
-				/>
-				<MTrack
-					title="Integration Track"
-					subtitle="Helping You Connect & Plug Into The Interchain"
-					content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
-				/>
+				<!-- TRACKS MOBILE -->
+				<div class="lg:hidden flex flex-nowrap overflow-x-scroll bg-grey scrolling-touch snap-x snap-mandatory pt-32 pb-16 scroll-container">
+					<MTrack
+						title="Accelerator Track"
+						subtitle="Technical Support & Guidance for Web3 Founders"
+						content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
+					/>
+					<MTrack
+						title="Orientation Track"
+						subtitle="Helping You Decide If Cosmos Is Right For You"
+						content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
+					/>
+					<MTrack
+						title="Integration Track"
+						subtitle="Helping You Connect & Plug Into The Interchain"
+						content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
+					/>
+				</div>
 			</section>
 			<div class="lg:hidden flex justify-center w-screen px-sm-side py-16 bg-grey">
 				<img src="/icons/void.svg" class="inline h-[24px] w-auto px-6 icon hover:scale-110 transition-all duration-100 ease-in-out"/>
