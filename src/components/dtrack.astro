@@ -9,7 +9,7 @@ interface Props {
 const { title, subtitle, content, img } = Astro.props;
 ---
 
-<div class="panel section3 z-20 lg:grid lg:grid-cols-6 lg:h-screen lg:min-h-[640px] px-lg-side py-lg-top lg:snap-start" >
+<div class="z-20 lg:grid lg:grid-cols-6 lg:min-h-screen lg:min-h-[640px] px-lg-side py-lg-top lg:snap-start" >
     <div class="col-span-2 flex items-center relative ">
         <img src={img} class="absolute inset-0 object-contain h-full w-4/5 ml-[-100px]"/>
         <div class="h-full items-top z-50">
@@ -22,7 +22,7 @@ const { title, subtitle, content, img } = Astro.props;
         <p class="text-base mb-[24px]">
             {content}
         </p>
-        <div class="inline-block hover:scale-105 transition-all duration-100 ease-in-out bg-white">
+        <div class="inline-block mb-6 hover:scale-105 transition-all duration-100 ease-in-out">
             <a href="https://airtable.com/shrdDF6BQUDVH06fm" target="_blank">
                 <h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
                 <img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
