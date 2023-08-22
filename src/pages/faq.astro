@@ -2,22 +2,74 @@
 import FAQ from '../components/faq_comp.astro';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
+
+const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help early stage teams get to mainnet launch and beyond."
 ---
 
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/FAQPage">
 	<head>
+		<title>Interchain Builders Program - FAQ</title>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Interchain Builders Program FAQ</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+		<meta name="robots" content="max-image-preview:large" />
+		<meta name="description" content={metaDescription} />
+
+		<meta property="og:title" content="The Interchain Builders Program" />
+		<meta property="og:description" content={metaDescription}  />
+		<meta property="og:url" content="https://join.builders/" />
+		<meta property="og:site_name" content="Interchain Builders Program" />
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://join.builders/1200x800.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+
+		<meta name="twitter:title" content="Interchain Builders Program">
+		<meta name="twitter:description" content={metaDescription} >
+		<meta name="twitter:url" content="https://join.builders/">
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@BuildersProgram" />
+		<meta name="twitter:creator" content="@BuildersProgram" />
+		<meta name="twitter:domain" content="join.builders">
+
+		<script type="application/ld+json"> 
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Interchain Builders Program",
+			"url": "https://www.join.builders/",
+			"logo": {
+				"url": "https://join.builders/icon.png",
+				"@context": "http://schema.org",
+				"@type": "ImageObject"
+			},
+			"sameAs": [
+				"https://twitter.com/BuildersProgram", 
+				"https://www.youtube.com/@interchain_io"  
+			]
+		}
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GPLYS8KDE"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-4GPLYS8KDE');
+		</script>
 	</head>
 	<body class="bg-white text-black">
 		<!-- HEADER -->
 		<Header />
 		<div class="lg:grid lg:grid-cols-6 px-sm-side lg:px-lg-side py-32 lg:py-40">
 			<div class="lg:col-span-2 my-9">
-				<h4 class="text-md text-blue">Frequently<br/>Asked<br/>Questions</h4>
+				<h1 class="text-md text-blue">Frequently<br/>Asked<br/>Questions</h1>
 			</div>
 			<div class="md:col-start-3 md:col-span4 lg:col-span-3">
 				<FAQ
@@ -26,7 +78,7 @@ import Header from '../components/header.astro';
 				/>
 				<FAQ
 					question="Are there any costs for participating in the Interchain Builders Program?"
-					answer="No, the program is entirely free. The Builders Program is part of the ecosystem's public good infrastructure, funded by the ICF as part of their mandate to support the growth and development of the ecosystem."
+					answer="No, the program is entirely free. The Builders Program is part of the ecosystem's public good infrastructure, funded by the <a href='https://interchain.io' target='_blank' class='hover:underline text-blue'>Interchain Foundation</a> as part of their mandate to support the growth and development of the ecosystem."
 				/>
 				<FAQ
 					question="Can I receive a grant?"
@@ -46,15 +98,15 @@ import Header from '../components/header.astro';
 				/>
 				<FAQ
 					question="What are the eligibility requirements?"
-					answer="The Interchain Builders Program supports projects that are using at least one component of the Interchain Stack: Tendermint, CosmosSDK, IBC, CosmWasm.<br/><br/>Projects can enter the program at multiple stages, ranging to early stages such as pre-incorporation and fundraising as well as teams who are already more progressed. Teams who apply should have an established team in place and have a clear vision of their project. The most important thing for a successful application is a compelling idea and a well thought out proposal of your project. No white paper is needed, but the more detailed and more specific the information material is, the better."
+					answer="The Interchain Builders Program supports projects that are using at least one component of the Interchain Stack: <a href='https://cosmos.network/cometBFT' target='_blank' class='hover:underline text-blue'>CometBFT / Tendermint</a>, <a href='https://cosmos.network/appchains' target='_blank' class='hover:underline text-blue'>Cosmos SDK</a>, <a href='https://cosmos.network/ibc' target='_blank' class='hover:underline text-blue'>IBC</a>, <a href='https://cosmwasm.com/' target='_blank' class='hover:underline text-blue'>CosmWasm</a>.<br/><br/>Projects can enter the program at multiple stages, ranging to early stages such as pre-incorporation and fundraising as well as teams who are already more progressed. Teams who apply should have an established team in place and have a clear vision of their project. The most important thing for a successful application is a compelling idea and a well thought out proposal of your project. No white paper is needed, but the more detailed and more specific the information material is, the better."
 				/>
 				<FAQ
 					question="What if my project does not use the Interchain Stack?"
-					answer="If you are still orienting wether the Interchain Stack is the right solution for you to build your app specific chain or dApp on another Cosmos chain, we are also happy to support you in making that decision. Feel free to ask any questions you might have by emailing us at <a href='mailto:builders@interchain.io' target='_blank' class='hover:underline text-blue'>builders@interchain.io</a>. <br/><br/>If you would like to get an overview of the Interchain Stack and building a Cosmos chain, we provide some guidance <a href='https://hub.join.builders/the-cosmos-ecosystem/building-with-the-interchain-stack' target='_blank' class='hover:underline text-blue'>here</a>."
+					answer="If you are still orienting wether the Interchain Stack is the right solution for you to build your app specific chain or dApp on another Cosmos SDK chain, we are also happy to support you in making that decision. Feel free to ask any questions you might have by emailing us at <a href='mailto:builders@interchain.io' target='_blank' class='hover:underline text-blue'>builders@interchain.io</a>. <br/><br/>If you would like to learn more about building a Cosmos SDK chain, we provide some guidance in our <a href='https://hub.join.builders/the-cosmos-ecosystem/building-with-the-interchain-stack' target='_blank' class='hover:underline text-blue'>overview of the Interchain Stack</a>."
 				/>
 				<FAQ
-					question="Do I need to have funding in order to apply to the Builders Program?"
-					answer="No. If your project is at a stage where it doesn't have funding yet, we will help you with a fundraising strategy and navigate you through the funding process and help connect you to our ever growing network of Venture Funds."
+					question="Do I need to have funding in order to apply to the Interchain Builders Program?"
+					answer="No. If your blockchain project is at a stage where it doesn't have funding yet, we will help you with a fundraising strategy and navigate you through the funding process and help connect you to our ever growing network of Venture Capital firms."
 				/>
 				<FAQ
 					question="How long does the program run for?"
@@ -63,16 +115,8 @@ import Header from '../components/header.astro';
 			</div>
 		</div>
 		<Footer />
-		<!-- <script type="module" src="/scrollTrigger.js"></script> -->
 		<script>
-			document.querySelector('.menu-open').addEventListener('click', () => {
-				document.querySelector('.menu').classList.toggle('opacity-0');
-				document.querySelector('.menu').classList.toggle('pointer-events-none');
-			});
-			document.querySelector('.menu-close').addEventListener('click', () => {
-				document.querySelector('.menu').classList.toggle('opacity-0');
-				document.querySelector('.menu').classList.toggle('pointer-events-none');
-			});
+			import "../scripts/menu.js";
 		</script>
 	</body>
 </html>

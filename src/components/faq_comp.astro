@@ -7,9 +7,11 @@ interface Props {
 const { question, answer } = Astro.props;
 ---
 
-<div class="border-b-[1px] border-blue">
-    <h2 class="font-bold text-[30px] leading-[30px] lg:text-[40px] lg:leading-[40px] my-9 text-blue">{question}</h2>
-    <p class="text-[20px] lg:text-base mb-9">
-        <Fragment set:html={answer} />
-    </p>
+<div class="border-b-[1px] border-blue" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h2 class="font-bold text-[30px] leading-[30px] lg:text-[40px] lg:leading-[40px] my-9 text-blue" itemprop="name">{question}</h2>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p class="text-[20px] lg:text-base mb-9" itemprop="text">
+            <Fragment set:html={answer} />
+        </p>
+    </div>
 </div>
