@@ -10,7 +10,7 @@ import MTrack from '../components/mtrack.astro';
 import Offer from '../components/offer.astro';
 import Team from '../components/team.astro';
 
-const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help early stage teams get to mainnet launch and beyond."
+const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help Enterprises and Web3 founders get to mainnet launch and beyond."
 ---
 
 <html lang="en">
@@ -81,21 +81,21 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 				<!-- TRACKS DESKTOP-->
 				<div class="hidden z-20 relative lg:grid bg-grey">
 					<DTrack
-						title="Accelerator Track"
-						subtitle="Technical Support & Guidance for Web3 Founders"
-						content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
+						title="Technical Support"
+						subtitle="Get Access to Core Developers"
+						content="We guide technical decision makers through architectural decisions and developers with sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
 						img="/icons/desktop/iconsCUT_04.track-A.svg"
 					/>
 					<DTrack
-						title="Orientation Track"
-						subtitle="Helping You Decide If Cosmos Is Right For You"
-						content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
+						title="Ecosystem Partnerships"
+						subtitle="Get a Warm Intro To Anyone"
+						content="With our broad overview of what's happening in the space we can support you in deciding which partnerships make sense for you. From investors to validators, and from dApps to auditors, we'll make sure you'll get a foot in the door."
 						img="/icons/desktop/iconsCUT_05.track-B.svg"
 					/>
 					<DTrack
-						title="Integration Track"
-						subtitle="Helping You Connect & Plug Into The Interchain"
-						content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
+						title="Business & Strategy"
+						subtitle="Get Closer to Your Goals"
+						content="We sit down with your team to learn about your project's business needs and help you assess whether blockchain technology and the Interchain Stack are the most suitable tools for you to reach your company's goals."
 						img="/icons/desktop/iconsCUT_06.track-C.svg"
 					/>
 				</div>
@@ -103,19 +103,19 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 				<!-- TRACKS MOBILE -->
 				<div class="lg:hidden flex flex-nowrap overflow-x-scroll bg-grey scrolling-touch snap-x snap-mandatory pt-32 pb-8 scroll-container">
 					<MTrack
-						title="Accelerator Track"
-						subtitle="Technical Support & Guidance for Web3 Founders"
-						content="We guide Cosmos projects through regular sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
+						title="Technical Support"
+						subtitle="Get Access to Core Developers"
+						content="We guide technical decision makers through architectural decisions and developers with sessions & asynchronous support. Benefit from access to industry experts ready to share their observations on the best practices in the space."
 					/>
 					<MTrack
-						title="Orientation Track"
-						subtitle="Helping You Decide If Cosmos Is Right For You"
-						content="With a plethora of tech stacks available, it can be hard to find a home for your product. We assist teams in finding the perfect balance between technical suitability and long-term economic viability."
+						title="Ecosystem Partnerships"
+						subtitle="Get a Warm Intro To Anyone"
+						content="With our broad overview of what's happening in the space we can support you in deciding which partnerships make sense for you. From investors to validators, and from dApps to auditors, we'll make sure you'll get a foot in the door."
 					/>
 					<MTrack
-						title="Integration Track"
-						subtitle="Helping You Connect & Plug Into The Interchain"
-						content="If you have already launched a product in a different ecosystem and are looking for ways to integrate with Cosmos, we’re here to provide technical guidance and introductions to the key players in the space."
+						title="Business & Strategy"
+						subtitle="Get Closer to Your Goals"
+						content="We sit down with your team to learn about your project's business needs and help you assess whether blockchain technology and the Interchain Stack are the most suitable tools for you to reach your company's goals."
 					/>
 				</div>
 			</section>
@@ -135,12 +135,15 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 			import "../scripts/menu.js";
 			
 			document.addEventListener('DOMContentLoaded', function () {
-				let scrollSections = Array.from(document.querySelectorAll('.scroll-section'));
-				let icons = Array.from(document.querySelectorAll('.icon'));
-				let scrollContainer = document.querySelector('.scroll-container');
-
+			let scrollSections = Array.from(document.querySelectorAll('.scroll-section'));
+			let icons = Array.from(document.querySelectorAll('.icon'));
+			let scrollContainer = document.querySelector('.scroll-container');
+			
+			// Check if scrollContainer is not null
+			if (scrollContainer) {
 				scrollContainer.addEventListener('scroll', (e) => {
-					let currentSectionIndex = Math.round(e.target.scrollLeft / window.innerWidth);
+					let target = e.target as HTMLElement;
+					let currentSectionIndex = Math.round(target.scrollLeft / window.innerWidth);
 
 					icons.forEach((icon, index) => {
 						let iconSrc = (index === currentSectionIndex) ? '/icons/void.svg' : '/icons/filled.svg';
@@ -150,13 +153,19 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 
 				icons.forEach((icon, index) => {
 					icon.addEventListener('click', () => {
-						scrollContainer.scrollTo({
-							left: window.innerWidth * index,
-							behavior: 'smooth'
-						});
+						if (scrollContainer) { // This check is technically redundant within the current structure but is a good practice if the code is refactored later.
+							scrollContainer.scrollTo({
+								left: window.innerWidth * index,
+								behavior: 'smooth'
+							});
+						}
 					});
 				});
-			});
+			} else {
+				console.error('scrollContainer element not found.');
+			}
+		});
+
 		</script>
 	</body>
 </html>
