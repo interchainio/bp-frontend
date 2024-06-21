@@ -1,0 +1,99 @@
+---
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+
+const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help Enterprises and Web3 founders get to mainnet launch and beyond."
+---
+
+<html lang="en">
+	<head>
+		<title>Interchain Builders Program - Apply</title>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+		<meta name="robots" content="max-image-preview:large" />
+		<meta name="description" content={metaDescription} />
+
+		<meta property="og:title" content="The Interchain Builders Program" />
+		<meta property="og:description" content={metaDescription}  />
+		<meta property="og:url" content="https://join.builders/" />
+		<meta property="og:site_name" content="Interchain Builders Program" />
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://join.builders/1200x800.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+
+		<meta name="twitter:title" content="Interchain Builders Program">
+		<meta name="twitter:description" content={metaDescription} >
+		<meta name="twitter:url" content="https://join.builders/">
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@BuildersProgram" />
+		<meta name="twitter:creator" content="@BuildersProgram" />
+		<meta name="twitter:domain" content="join.builders">
+
+		<script type="application/ld+json"> 
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Interchain Builders Program",
+			"url": "https://www.join.builders/",
+			"logo": {
+				"url": "https://join.builders/icon.png",
+				"@context": "http://schema.org",
+				"@type": "ImageObject"
+			},
+			"sameAs": [
+				"https://twitter.com/BuildersProgram", 
+				"https://www.youtube.com/@interchain_io"  
+			]
+		}
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GPLYS8KDE"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-4GPLYS8KDE');
+		</script>
+	</head>
+	<body class="bg-white text-black">
+		<!-- HEADER -->
+		<Header />
+		
+		<div class="lg:grid lg:grid-cols-6 px-sm-side lg:px-lg-side py-32 lg:py-40">
+			<div class="lg:col-span-2 my-9">
+				<h1 class="text-md text-blue">Apply to<br/>the Interchain<br/>Builders Program</h1>
+			</div>
+			<div class="md:col-start-3 md:col-span4 lg:col-span-3 lg:py-10">
+				<script is:inline>
+					window.addEventListener('DOMContentLoaded', (event) => {
+						const script = document.createElement('script');
+						script.charset = 'utf-8';
+						script.type = 'text/javascript';
+						script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+						document.body.appendChild(script);
+
+						script.onload = () => {
+							hbspt.forms.create({
+								region: "eu1",
+								portalId: "144577018",
+								formId: "ec8cd745-2d19-4665-899c-245d86f9b161"
+							});
+						};
+					});
+				</script>
+			</div>
+		</div>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+	</body>
+</html>
