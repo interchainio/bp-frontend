@@ -4,9 +4,10 @@ interface Props {
   size: "sm" | "md" ;
   text: string;
   isDisabled?: boolean;
+  href?: string;
 }
 
-const { variant, size, text, isDisabled=false } = Astro.props as Props
+const { variant, size, text, isDisabled=false, href='/apply' } = Astro.props as Props
 
 const classList = [
             "transition-all",
@@ -14,8 +15,10 @@ const classList = [
             "ease-in-out",
             "flex",
             variant!=='arrow' && "active:scale-95",
-            variant==='default' && "text-white",
-            variant==='default' && "bg-blue",
+            (variant==='default' && !isDisabled ) && "text-white",
+            (variant==='default' && !isDisabled ) && "bg-blue",
+            (variant==='default' && isDisabled ) && "text-blue",
+            (variant==='default' && isDisabled ) && "bg-white",
             variant==='default' && "border-[1px]",
             (variant==='default' && !isDisabled) && "hover:text-blue",
             (variant==='default' && !isDisabled) && "hover:bg-white",
@@ -43,7 +46,7 @@ const classList = [
 ---
 
 {!isDisabled ? (
-    <a href="/apply/">
+    <a href={href}>
         <button 
             title="Apply now to the Builders Program"
             class:list={classList}
