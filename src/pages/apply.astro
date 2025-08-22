@@ -4,9 +4,6 @@ import Header from '../components/header.astro';
 
 const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help Enterprises and Web3 founders get to mainnet launch and beyond."
 ---
-<!-- 
-	TODO: disable form
--->
 
 <html lang="en">
 	<head>
@@ -107,6 +104,22 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
                 });
             }
         </script>
+		<style>
+			form {
+				color: #7e7e7e7e !important;
+			}
+			#interchainStackLegend {
+				color: #7e7e7e7e !important;
+			}
+			#currentlyBuildingLegend {
+				color: #7e7e7e7e !important;
+			}
+			#submitButton {
+				background-color: #7e7e7e7e !important;
+				border: 0px !important;
+				border-color: transparent !important;
+			}
+		</style>
 	</head>
 	<body class="bg-white text-black">
 		<!-- HEADER -->
@@ -417,6 +430,7 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 						/>
 					</label>
 					<button 
+						disabled
                         id="submitButton"
 						type="submit"
 						class="bg-blue border-4 border-blue text-white font-bold w-fit px-6 py-3 text-[20px] transition-all duration-500"
