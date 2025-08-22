@@ -12,7 +12,7 @@ const { } = Astro.props;
             <li class="inline pr-[50px]"><a href="/faq/" class="hover:underline">FAQ</a></li>
             <li class="inline pr-[50px]"><a href="https://hub.join.builders" target="_blank" class="hover:underline">Knowledge Hub</a></li>
         </ul>
-        <ApplyButton variant='black' size='sm' text='APPLY'/>
+        <ApplyButton isDisabled={true} variant='black' size='sm' text='APPLY'/>
     </div>
     <div class="flex md:hidden">
         <button class="menu-open mx-6 my-6 hover:scale-105 transition-all duration-100 ease-in-out">
@@ -26,7 +26,7 @@ const { } = Astro.props;
             <!-- <a href="/#section-team"><h4 class="font-normal text-[30px] py-2 hover:underline">Team</h4></a> -->
             <a href="/faq/" class="hover:underline"><h4 class="font-normal text-[30px] py-2 hover:underline">FAQ</h4></a>
             <a href="https://hub.join.builders" target="_blank"><h4 class="font-normal text-[30px] pt-2 pb-32 hover:underline">Knowledge Hub</h4></a>
-            <ApplyButton variant='negative' size='sm' text='APPLY'/>
+            <ApplyButton isDisabled={true} variant='negative' size='sm' text='APPLY'/>
         </div>
     </div>
 </header>
