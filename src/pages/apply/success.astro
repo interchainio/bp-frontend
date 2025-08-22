@@ -1,0 +1,84 @@
+---
+import Footer from '../../components/footer.astro';
+import Header from '../../components/header.astro';
+
+const metaDescription = "The Interchain Builders Program provides guidance and support to Cosmos builders. We help Enterprises and Web3 founders get to mainnet launch and beyond."
+---
+
+<html lang="en" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		<title>Interchain Builders Program - 404</title>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+		<meta name="robots" content="max-image-preview:large" />
+		<meta name="description" content={metaDescription} />
+
+		<meta property="og:title" content="The Interchain Builders Program" />
+		<meta property="og:description" content={metaDescription}  />
+		<meta property="og:url" content="https://join.builders/" />
+		<meta property="og:site_name" content="Interchain Builders Program" />
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://join.builders/1200x800.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+
+		<meta name="twitter:title" content="Interchain Builders Program">
+		<meta name="twitter:description" content={metaDescription} >
+		<meta name="twitter:url" content="https://join.builders/">
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@BuildersProgram" />
+		<meta name="twitter:creator" content="@BuildersProgram" />
+		<meta name="twitter:domain" content="join.builders">
+		
+		<script type="application/ld+json"> 
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Interchain Builders Program",
+			"url": "https://www.join.builders/",
+			"logo": {
+				"url": "https://join.builders/icon.png",
+				"@context": "http://schema.org",
+				"@type": "ImageObject"
+			},
+			"sameAs": [
+				"https://twitter.com/BuildersProgram", 
+				"https://www.youtube.com/@interchain_io"  
+			]
+		}
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GPLYS8KDE"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-4GPLYS8KDE');
+		</script>
+		<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/144577018.js"></script>
+	</head>
+	<body class="bg-white text-black">
+		<!-- HEADER -->
+		<Header />
+		<section class="flex items-center justify-center lg:min-h-[400px] px-sm-side lg:px-lg-side pt-24 pb-lg-top lg:py-lg-top bg-white">
+			<div class="pt-24 ">
+				<h1 class="font-bold text-lg lg:text-xl mb-4 text-blue">Thanks!</h1>
+				<h2 class="font-semibold text-md lg:text-lg mb-12">Your submission has been correctly registered.</h2>
+				<a href="/#">
+					<h6 class="font-medium text-md hover:underline">Go Home</h6>
+				</a>
+			</div>
+		</section>
+		<Footer />
+		<script>
+			import "../../scripts/menu.js";
+		</script>
+	</body>
+</html>
