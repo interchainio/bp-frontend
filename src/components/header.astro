@@ -1,4 +1,6 @@
 ---
+import ApplyButton from '../components/apply_button.astro';
+
 const { } = Astro.props;
 ---
 
@@ -10,11 +12,7 @@ const { } = Astro.props;
             <li class="inline pr-[50px]"><a href="/faq/" class="hover:underline">FAQ</a></li>
             <li class="inline pr-[50px]"><a href="https://hub.join.builders" target="_blank" class="hover:underline">Knowledge Hub</a></li>
         </ul>
-        <a href="/apply/">	
-            <button class="px-[16px] py-[8px] border-black border hover:border-blue hover:bg-blue hover:text-white active:scale-95 transition-all duration-100 ease-in-out" title="Apply now to the Builders Program">
-                <h6 class="font-medium text-sm">APPLY</h6>
-            </button>
-        </a>
+        <ApplyButton isDisabled={true} variant='black' size='sm' text='APPLY'/>
     </div>
     <div class="flex md:hidden">
         <button class="menu-open mx-6 my-6 hover:scale-105 transition-all duration-100 ease-in-out">
@@ -28,11 +26,13 @@ const { } = Astro.props;
             <!-- <a href="/#section-team"><h4 class="font-normal text-[30px] py-2 hover:underline">Team</h4></a> -->
             <a href="/faq/" class="hover:underline"><h4 class="font-normal text-[30px] py-2 hover:underline">FAQ</h4></a>
             <a href="https://hub.join.builders" target="_blank"><h4 class="font-normal text-[30px] pt-2 pb-32 hover:underline">Knowledge Hub</h4></a>
-            <a href="/apply/">	
-                <button class="px-[16px] py-[8px] border-white border hover:bg-white hover:text-blue active:scale-95 transition-all duration-100 ease-in-out" title="Apply now to the Builders Program">
-                    <h6 class="font-medium text-sm">APPLY</h6>
-                </button>
-            </a>
+            <!-- TODO: remove this wrapper when form submissions accepted again -->
+            <div class="w-full flex items-center justify-center">
+                <ApplyButton isDisabled={true} variant='negative' size='sm' text='APPLY'/>
+            </div>
+            <div class="w-full flex items-center justify-center mt-8">
+                <ApplyButton isDisabled={false} variant='default' size='md' text='Contact Us' href="https://cosmos.network/interest-form"/>
+            </div>
         </div>
     </div>
 </header>

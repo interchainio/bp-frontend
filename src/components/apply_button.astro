@@ -1,0 +1,71 @@
+---
+interface Props {
+  variant: "default" | "negative" | "black" | "arrow";
+  size: "sm" | "md" ;
+  text: string;
+  isDisabled?: boolean;
+  href?: string;
+}
+
+const { variant, size, text, isDisabled=false, href='/apply' } = Astro.props as Props
+
+const classList = [
+            "transition-all",
+            "duration-100",
+            "ease-in-out",
+            "flex",
+            variant!=='arrow' && "active:scale-95",
+            (variant==='default' && !isDisabled ) && "text-white",
+            (variant==='default' && !isDisabled ) && "bg-blue",
+            (variant==='default' && isDisabled ) && "text-blue",
+            (variant==='default' && isDisabled ) && "bg-white",
+            variant==='default' && "border-[1px]",
+            (variant==='default' && !isDisabled) && "hover:text-blue",
+            (variant==='default' && !isDisabled) && "hover:bg-white",
+            variant==='negative' && "text-white",
+            variant==='negative' && "bg-blue",
+            variant==='negative' && "border-white",
+            variant==='negative' && "border-[1px]",
+            (variant==='negative' && !isDisabled) && "hover:bg-white",
+            (variant==='negative' && !isDisabled) && "hover:text-blue",
+            variant==='black' && "text-black",
+            variant==='black' && "border-black",
+            variant==='black' && "border-[1px]",
+            (variant==='black' && !isDisabled) && "hover:bg-blue",
+            (variant==='black' && !isDisabled) && "hover:text-white",
+            size==='md' && "px-[30px]",
+            size==='md' && "py-[14px]",
+            size==='sm' && "px-[16px]",
+            size==='sm' && "py-[8px]",
+            variant==='arrow' && "text-blue",
+            (variant==='arrow' && !isDisabled) && "hover:scale-105",
+            (variant==='arrow' && isDisabled) && "border-[1px]",
+            (variant==='arrow' && isDisabled) && "border-blue",
+            (variant==='arrow' && !isDisabled) && "pl-0",
+        ]
+---
+
+{!isDisabled ? (
+    <a href={href}>
+        <button 
+            title="Apply now to the Builders Program"
+            class:list={classList}
+        >
+            <h6 class="font-medium text-sm">
+                { text }
+            </h6>
+            {variant==='arrow' && (
+                <img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[10px]" />
+            )}
+        </button>
+    </a>
+) : (
+    <button 
+        class:list={classList}
+        disabled
+    >
+        <h6 class="font-medium text-sm">
+            { "The Builders Program is not accepting submissions right now" }
+        </h6>
+    </button>
+)}
