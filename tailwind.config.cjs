@@ -15,7 +15,8 @@ module.exports = {
 			'white': '#F5F5F5',
 			'grey': '#EFEFEF',
 			'black': '#0F0F0F',
-			'blue': '#0072F7'
+			'blue': '#0072F7',
+			'red': '#E32A42'
 		},
 		fontFamily: {
 			sans: ['"Helvetica Neue"', 'sans-serif'],

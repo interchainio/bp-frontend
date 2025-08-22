@@ -73,23 +73,311 @@ const metaDescription = "The Interchain Builders Program provides guidance and s
 				<h1 class="text-md text-blue">Apply to<br/>the Interchain<br/>Builders Program</h1>
 			</div>
 			<div class="md:col-start-3 md:col-span4 lg:col-span-3 lg:py-10">
-				<script is:inline>
-					window.addEventListener('DOMContentLoaded', (event) => {
-						const script = document.createElement('script');
-						script.charset = 'utf-8';
-						script.type = 'text/javascript';
-						script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
-						document.body.appendChild(script);
+				<form
+					action="https://formspree.io/f/meozbplb"
+					method="POST"
+					class="flex flex-col gap-6 justify-items-start"
+				>	
+					<!-- Company/Project info -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">Company/Project Name <span class="text-red -translate-y-1">*</span></p>
+						<input class="p-2" type="text" name="company_or_project" required >
+					</label>
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">Project Description <span class="text-red -translate-y-1">*</span></p>
+						<textarea class="p-2 min-h-[160px]" name="project_description" required />
+					</label>
+					<!-- Personal contact info -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6">
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">First Name <span class="text-red -translate-y-1">*</span></p>
+							<input class="p-2" type="text" name="firstname" required >
+						</label>
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">Last Name <span class="text-red -translate-y-1">*</span></p>
+							<input class="p-2" type="text" name="lastname" required >
+						</label>
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">Job Title <span class="text-red -translate-y-1">*</span></p>
+							<input class="p-2" type="text" name="job_title" required >
+						</label>
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">Company Email <span class="text-red -translate-y-1">*</span></p>
+							<input class="p-2" type="email" name="email" required >
+						</label>
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">Telegram Handle</p>
+							<input class="p-2" type="text" name="telegram_handle" >
+						</label>
+						<label class="flex flex-col gap-2 text-[18px]">
+							<p class="font-medium">Twitter username</p>
+							<input class="p-2" type="text" name="twitter_username" >
+						</label>
+					</div>
+					<!-- Journey info (Radio) -->
+					<div class="flex flex-col gap-1 text-[18px]">
+						<fieldset>
+							<legend class="font-medium">
+								Your Journey <span class="text-red -translate-y-1">*</span>
+							</legend>
+							<p class="text-sm text-[#516383DE] mb-2">
+								Help us understand how we can support you best
+							</p>
+							<div>
+								<input type="radio" id="j1" name="journey" value="Currently building a Cosmos-SDK based chain or dApp" required />
+								<label for="j1">Currently building a Cosmos-SDK based chain or dApp</label>
+							</div>
 
-						script.onload = () => {
-							hbspt.forms.create({
-								region: "eu1",
-								portalId: "144577018",
-								formId: "b0e9f1b5-a998-40cf-8f6c-b61ef4ff2b69"
-							});
-						};
-					});
-				</script>
+							<div>
+								<input type="radio" id="j2" name="journey" value="Recently started looking into blockchain technology" />
+								<label for="j2">Recently started looking into blockchain technology</label>
+							</div>
+
+							<div>
+								<input type="radio" id="j3" name="journey" value="Still in the decision-making phase on which tech stack to use" />
+								<label for="j3">Still in the decision-making phase on which tech stack to use</label>
+							</div>
+							<div>
+								<input type="radio" id="j4" name="journey" value="Building in another ecosystem considering migrating to Cosmos" />
+								<label for="j4">Building in another ecosystem considering migrating to Cosmos</label>
+							</div>
+							<div>
+								<input type="radio" id="j5" name="journey" value="Launched elsewhere but want to expand to Cosmos or leverage IBC" />
+								<label for="j5">Launched elsewhere but want to expand to Cosmos or leverage IBC</label>
+							</div>
+						</fieldset>
+					</div>
+					<!-- Ecosystems info -->
+					<label class="flex flex-col gap-1 text-[18px]">
+						<p class="font-medium">Ecosystem <span class="text-red -translate-y-1">*</span></p>
+						<p class="text-sm text-[#516383DE] mb-2">
+							Other than ours, what ecosystems are you exploring, or migrating from, or expanding out of?
+						</p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="ecosystem" 
+							placeholder="We are also exploring... / We are migrating from... / We are expanding out of..." 
+							required
+						/>
+					</label>
+					<!-- Website / Docs / Repo -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">Website, Docs & Repo link <span class="text-red -translate-y-1">*</span></p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="website_docs_repos" 
+							required
+						/>
+					</label>
+					<!-- Interchain Stack (Checkbox) -->
+					<div class="flex flex-col gap-1 text-[18px]">
+						<fieldset>
+							<legend class="font-medium">
+								Which part of the Interchain Stack are you considering using? <span class="text-red -translate-y-1">*</span>
+							</legend>
+							<p class="text-sm text-[#516383DE] mb-1">
+								You can select multiple options
+							</p>
+							<div>
+								<input type="checkbox" id="stack1" name="interchain_stack" value="Cosmos SDK" />
+								<label for="stack1">Cosmos SDK</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="stack2" name="interchain_stack" value="CometBFT / Tendermint" />
+								<label for="stack2">CometBFT / Tendermint</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="stack3" name="interchain_stack" value="IBC" />
+								<label for="stack3">IBC</label>
+							</div>
+							<div>
+								<input type="checkbox" id="stack4" name="interchain_stack" value="CosmWasm" />
+								<label for="stack4">CosmWasm</label>
+							</div>
+							<div>
+								<input type="checkbox" id="stack5" name="interchain_stack" value="Other" />
+								<label for="stack5">Other</label>
+							</div>
+						</fieldset>
+					</div>
+					<!-- Company size (select) -->
+					<label class="flex flex-col gap-2 text-[18px]" for="company_size">
+						<p class="font-medium">What is the size of your organization? <span class="text-red -translate-y-1">*</span></p>
+						<select name="company_size" id="company_size" class="p-2" required>
+							<option value="" disabled selected>Please Select</option>
+							<option value="1-5 employees">1-5 employees</option>
+							<option value="5-25 employees">5-25 employees</option>
+							<option value="25-50 employees">25-50 employees</option>
+							<option value="50-100 employees">50-100 employees</option>
+							<option value="100-500 employees">100-500 employees</option>
+							<option value="500-1000 employees">500-1000 employees</option>
+							<option value="1000+ employees">1000+ employees</option>
+						</select>
+					</label>
+					<!-- Currently building (checkbox) -->
+					<div class="flex flex-col gap-1 text-[18px]">
+						<fieldset>
+							<legend class="font-medium">
+								What are you building? <span class="text-red -translate-y-1">*</span>
+							</legend>
+							<p class="text-sm text-[#516383DE] mb-1">
+								You can select multiple options
+							</p>
+							<div>
+								<input type="checkbox" id="building1" name="currently_building" value="Layer 1 Blockchain" required />
+								<label for="building1">Layer 1 Blockchain</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building2" name="currently_building" value="Layer 2 / Rollup" />
+								<label for="building2">Layer 2 / Rollup</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building3" name="currently_building" value="dApp" />
+								<label for="building3">dApp</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building4" name="currently_building" value="DEX / DeFi" />
+								<label for="building4">DEX / DeFi</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building5" name="currently_building" value="CEX / Fiat On/Offramp" />
+								<label for="building5">CEX / Fiat On/Offramp</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building6" name="currently_building" value="NFT Platform" />
+								<label for="building6">NFT Platform</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building7" name="currently_building" value="Real World Assets" />
+								<label for="building7">Real World Assets</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building8" name="currently_building" value="Privacy Solution" />
+								<label for="building8">Privacy Solution</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building9" name="currently_building" value="Wallets / Custody" />
+								<label for="building9">Wallets / Custody</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building10" name="currently_building" value="Compliance Solutions" />
+								<label for="building10">Compliance Solutions</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building11" name="currently_building" value="Bridging Solution" />
+								<label for="building11">Bridging Solution</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building12" name="currently_building" value="Oracle" />
+								<label for="building12">Oracle</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building13" name="currently_building" value="Gaming" />
+								<label for="building13">Gaming</label>
+							</div>
+							<div>
+								<input type="checkbox" id="building14" name="currently_building" value="Other" />
+								<label for="building14">Other</label>
+							</div>
+							<label class="flex flex-col gap-1 text-[18px]">
+								If you chose Other, please specify.
+								<p class="text-sm text-[#516383DE] mb-1">
+									What are you building?
+								</p>
+								<input class="p-2" type="text" name="currently_building_other" >
+							</label>
+						</fieldset>
+					</div>
+					<!-- Project stage (Radio) -->
+					<div class="flex flex-col gap-2 text-[18px]">
+						<fieldset>
+							<legend class="font-medium">
+								At what stage is the project currently?
+							</legend>
+							<div>
+								<input type="radio" id="stage1" name="project_stage" value="Pre-Testnet" />
+								<label for="stage1">Pre-Testnet</label>
+							</div>
+
+							<div>
+								<input type="radio" id="stage2" name="project_stage" value="Testnet" />
+								<label for="stage2">Testnet</label>
+							</div>
+
+							<div>
+								<input type="radio" id="stage3" name="project_stage" value="Mainnet" />
+								<label for="stage3">Mainnet</label>
+							</div>
+						</fieldset>
+					</div>
+					<!-- Project stage description -->
+					<label class="flex flex-col gap-1 text-[18px]">
+						<p class="font-medium">Please describe the current stage of the project in more detail <span class="text-red -translate-y-1">*</span></p>
+						<p class="text-sm text-[#516383DE] mb-2">
+							i.e previous achievements, next milestones, etc.
+						</p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="project_stage_description"  
+							required
+						/>
+					</label>
+					<!-- How many Users -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">How many users do you have?</p>
+						<input class="p-2" type="number" min="0" name="users_number" >
+					</label>
+					<!-- Is Structured Project (Radio) -->
+					<div class="flex flex-col gap-1 text-[18px]">
+						<fieldset>
+							<legend class="font-medium">
+								Has the company been incorporated or set up a legal structure? <span class="text-red -translate-y-1">*</span>
+							</legend>
+							<div>
+								<input type="radio" id="structured1" name="project_structured" value="yes" required />
+								<label for="structured1">Yes</label>
+							</div>
+
+							<div>
+								<input type="radio" id="structured2" name="project_structured" value="no" />
+								<label for="structured2">No</label>
+							</div>
+						</fieldset>
+					</div>
+					<!-- Project fundraising status description -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">What is the current fundraising status? <span class="text-red -translate-y-1">*</span></p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="fundraising_status"  
+							required
+						/>
+					</label>
+					<!-- Main aspects -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">What are the main topics you would like to discuss and get supported on by the Builders Program? <span class="text-red -translate-y-1">*</span></p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="main_aspects"  
+							required
+						/>
+					</label>
+					<!-- How did you hear about this program -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">How did you hear about the Builders Program? <span class="text-red -translate-y-1">*</span></p>
+						<input class="p-2" type="text" name="how_did_you_hear_about_this_program" required >
+					</label>
+					<!-- Additional info -->
+					<label class="flex flex-col gap-2 text-[18px]">
+						<p class="font-medium">Do you have any additional information you would like to share with us?</p>
+						<textarea class="p-2 min-h-[160px]" 
+							name="additional_info"  
+						/>
+					</label>
+					<button 
+						type="submit"
+						class="bg-blue text-white font-bold w-fit px-6 py-3 text-[20px]"
+					>
+						Submit
+					</button>
+				</form>
 			</div>
 		</div>
 		<Footer />
