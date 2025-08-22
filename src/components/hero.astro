@@ -1,5 +1,7 @@
 ---
 const { } = Astro.props;
+import ApplyButton from '../components/apply_button.astro';
+
 ---
 
 <section class="lg:grid lg:grid-cols-3 lg:h-screen lg:min-h-[800px] px-sm-side lg:px-lg-side pt-24 pb-lg-top lg:py-lg-top bg-white lg:snap-start">
@@ -10,12 +12,7 @@ const { } = Astro.props;
     <div class="lg:col-span-2 lg:col-start-2 my-auto">
         <img src="/icons/mobile/mobile_01.hero-top.svg" class="max-h-[100px] mx-auto lg:hidden mb-[80px]"/>
         <h1 class="font-bold text-[15vw] leading-[15vw] lg:text-3xl mb-[80px] ml-[-8px]">Interchain <br/> Builders <br/> Program</h1>
-        <a href="/apply/">
-            <button class="px-[30px] py-[14px] text-white bg-blue border-[1px] hover:text-blue hover:bg-white active:scale-95 transition-all duration-100 ease-in-out" 
-            title="Apply now to the Builders Program">
-                <h6 class="font-medium text-sm">APPLY NOW</h6>
-            </button>
-        </a>
+        <ApplyButton variant='default' size='md' text='APPLY NOW'/>
         <img src="/icons/mobile/mobile_02.hero-bottom.svg" class="max-h-[300px] mx-auto lg:hidden mt-40"/>
     </div>
     <div class="lg:col-span-1 lg:col-start-6 pt-[80px] items-end mr-[-100px] hidden lg:flex">

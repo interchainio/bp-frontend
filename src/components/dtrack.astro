@@ -1,4 +1,6 @@
 ---
+import ApplyButton from '../components/apply_button.astro';
+
 interface Props {
 	title: string;
 	subtitle: string;
@@ -22,11 +24,6 @@ const { title, subtitle, content, img } = Astro.props;
         <p class="text-base mb-[20px]">
             {content}
         </p>
-        <div class="inline-block mb-6 hover:scale-105 transition-all duration-100 ease-in-out">
-            <a href="/apply/">
-                <h6 class="inline align-middle font-medium text-sm text-blue">APPLY NOW</h6>
-                <img src="/icons/arrow.png" class="inline h-[14px] w-auto ml-[6px]"/>
-            </a>
-        </div>
+        <ApplyButton variant='arrow' size='md' text='APPLY NOW'/>
     </div>
 </div>
